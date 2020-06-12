@@ -1,13 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './TielsContainer.css'
-import { setCheck, setSelectedElement, setSelectedColor, setHidding, setDefaultSelectedElements } from '../../redux/game-reducer';
+import { setCheck, setSelectedElement, setSelectedColor, setHidding } from '../../redux/game-reducer';
 import Tiels from './Tiels';
 
 
 
 const TielsContainer = (props) => {
     
+    const setDefaultSelectedElements = () => {
+        props.setSelectedColor(0);
+        props.setSelectedElement('');
+    }
   
     const setSelectedParams = (element, color) => {
         props.setSelectedColor(color);
@@ -32,7 +36,7 @@ const TielsContainer = (props) => {
                         }, 700);
                     }
                     props.setCheck(false)
-                    props.setDefaultSelectedElements()
+                    setDefaultSelectedElements()
                 } else {
                     let color = element.getAttribute('color')
                     setSelectedParams(element, color)
@@ -43,7 +47,6 @@ const TielsContainer = (props) => {
 
 
     }
-    console.log('rerender')
     return (
         <Tiels allElements = {props.allElements} onClick = {onClick} />
     );
@@ -77,12 +80,7 @@ let mapDispatchToProps = (dispatch) => {
         setHidding: (id, color, bool) => {
             let action = setHidding(id, color, bool);
             dispatch(action);
-        },
-        setDefaultSelectedElements: () => {
-            let action = setDefaultSelectedElements();
-            dispatch(action);
-        },
-
+        }
     }
 }
 

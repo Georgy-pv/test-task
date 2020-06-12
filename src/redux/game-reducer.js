@@ -55,15 +55,7 @@ const gameDataReducer = (state = initialState, action) => {
             selectedElement: action.element
           }  
 
-        case SET_DEFAULT_SELECTED_ELEMENTS:
-          return{
-            ...state,
-            selectedElement: '',
-            selectedColor: 0
-          }  
-
         case SET_HIDDING:
-            
             for(let i = 0; i < state.allElements.length; i++){
                 if(state.allElements[i].id == action.id){
                 let elements = [...state.allElements]
@@ -111,12 +103,6 @@ export const setHidding = (id, color, bool) => {
     return{
         type: SET_HIDDING,
         id, color, bool
-    }
-}
-
-export const setDefaultSelectedElements = () => {
-    return{
-        type: SET_DEFAULT_SELECTED_ELEMENTS
     }
 }
 
