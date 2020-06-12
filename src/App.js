@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import TilsContainer from './component/Tiels/TilsContainer';
+import TilesContainer from './component/Tiles/TilesContainer';
 
 function App() {
   return (
-   <TilsContainer />
+   <TilesContainer />
   );
 }
 

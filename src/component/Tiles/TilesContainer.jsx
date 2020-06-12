@@ -1,12 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
 import { setCheck, setSelectedElement, setSelectedColor, setHidding } from '../../redux/game-reducer';
-import Tils from './Tils';
+import Tiles from './Tiles';
 
 
 
-const TielsContainer = (props) => {
+const TilesContainer = (props) => {
     
     const setDefaultSelectedElements = () => {
         props.setSelectedColor(0);
@@ -48,7 +47,7 @@ const TielsContainer = (props) => {
 
     }
     return (
-        <Tils allElements = {props.allElements} onClick = {onClick} />
+        <Tiles allElements = {props.allElements} onClick = {onClick} />
     );
 }
 
@@ -87,6 +86,6 @@ let mapDispatchToProps = (dispatch) => {
 
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(TielsContainer);
+export default connect(mapStateToProps,mapDispatchToProps)(TilesContainer);
 
 
