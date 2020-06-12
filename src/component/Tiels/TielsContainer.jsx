@@ -60,15 +60,35 @@ let mapStateToProps = (state) => {
     }
 }
 
+let mapDispatchToProps = (dispatch) => {
+    return {
+        setCheck: (bool) => {
+            let action = setCheck(bool);
+            dispatch(action);
+        },
+        setSelectedColor: (color) => {
+            let action = setSelectedColor(color);
+            dispatch(action);
+        },
+        setSelectedElement: (element) => {
+            let action = setSelectedElement(element);
+            dispatch(action);
+        },
+        setHidding: (id, color, bool) => {
+            let action = setHidding(id, color, bool);
+            dispatch(action);
+        },
+        setDefaultSelectedElements: () => {
+            let action = setDefaultSelectedElements();
+            dispatch(action);
+        },
+
+    }
+}
 
 
 
-export default connect(mapStateToProps,{
-    setCheck,
-    setSelectedColor,
-    setSelectedElement,
-    setHidding,
-    setDefaultSelectedElements
-})(TielsContainer);
+
+export default connect(mapStateToProps,mapDispatchToProps)(TielsContainer);
 
 
