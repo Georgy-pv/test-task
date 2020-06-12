@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import './TielsContainer.css'
+
 import { setCheck, setSelectedElement, setSelectedColor, setHidding } from '../../redux/game-reducer';
-import Tiels from './Tiels';
+import Tils from './Tils';
 
 
 
@@ -48,7 +48,7 @@ const TielsContainer = (props) => {
 
     }
     return (
-        <Tiels allElements = {props.allElements} onClick = {onClick} />
+        <Tils allElements = {props.allElements} onClick = {onClick} />
     );
 }
 

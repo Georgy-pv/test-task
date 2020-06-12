@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './TielsContainer.css'
+import './TilsContainer.css'
 
 
-const Tiels = (props) => {
+const Tils = (props) => {
     
     return (
         <div id="game">
@@ -17,4 +17,4 @@ const Tiels = (props) => {
     );
 }
 
-export default Tiels;
+export default Tils;

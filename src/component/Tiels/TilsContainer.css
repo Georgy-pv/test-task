@@ -1,9 +1,4 @@
-*{
-    box-sizing: border-box;
-}
-body{
-    background: #818cd1;
-}
+
 #game{
     height: 455px;
     width: 880px;
