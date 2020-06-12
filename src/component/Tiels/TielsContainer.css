@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: #818cd1;
+}
+#game{
+    height: 455px;
+    width: 880px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.block{
+    display: inline-block;
+    height: 100px;
+    width: 200px;
+    margin: 10px;
+    transition: all .3s;
+    border: 1px solid #ffffff;
+    box-shadow:  0 0 11px rgba(0,0,0,0.6);
+    transform: rotateY(0deg);
+}
+.color1{
+    background: red;
+}
+.color2{
+    background: blue;
+}
+
+.color3{
+    background: black;
+}
+.color4{
+    background: orange;
+}
+.color5{
+    background: yellow;
+}
+.color6{
+    background: olive;
+}
+.color7{
+    background: pink;
+}
+.color8{
+    background: green;
+}
+.hidden{
+    background-color: #16247a;
+    transform: rotateY(180deg);
+}
