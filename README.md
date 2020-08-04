@@ -8,5 +8,6 @@ The gameplay is the sequence of rounds. In each round the user should select 2 t
 
 
 **General notes:**
-You are welcome to use any tools you like, the only requirement is that the target application works in modern browsers (IE >= 10). Mobile browsers are not required. Use git and push repository to your github account for review.
+You are welcome to use any tools you like, the only requirement is that the target application works in modern browsers (IE >= 10). Mobile browsers are not required. Use git and push repository to your github account for review. 
+
 The project is started by the command `npm start` in the console
